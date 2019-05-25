@@ -29,7 +29,6 @@ export class GameScene extends Scene{
 		const menuBtn = GameService.createButton("Game menu", SCENE_WIDTH - 260, 5);
 		menuBtn.on('pointerdown', this.onBtnClick);		
 		this.addChild(menuBtn);
-
 		this.HudOverlay = new GameHud();
 	}
 

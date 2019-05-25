@@ -2,8 +2,8 @@ import * as PIXI from 'pixi.js';
 import { SceneManager } from 'pixi-scenegraph';
 import { IRendererOptions } from 'pixi-scenegraph/dist/core/RendererOptions';
 
-export const SCENE_WIDTH = 1600;
-export const SCENE_HEIGHT = 800;
+export const SCENE_WIDTH = 1920;
+export const SCENE_HEIGHT = 1080;
 export const TXT_STYLE = new PIXI.TextStyle({
   fontFamily: 'Arial',
   fontSize: 36,
