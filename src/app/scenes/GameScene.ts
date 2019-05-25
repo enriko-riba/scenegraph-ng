@@ -10,7 +10,6 @@ export class GameScene extends Scene{
 
 	constructor() {
 		super("main");	//	this is	the scene name
-
 		this.BackGroundColor = 0x4433ff;
 
 		const spr = PIXI.Sprite.from('assets/background.png');
@@ -37,10 +36,7 @@ export class GameScene extends Scene{
 	}
 
 	onUpdate(dt: number, timestamp: number){
-
-		//	get the hud image for changing the tint
-		let hudSprite = this.HudOverlay.children[0] as PIXI.Sprite;	
-
+	
 		//	calc gravatar rotation angle
 		const MILLI_TO_SECOND = 1/1000;
 		const rot = (dt * 20 * MILLI_TO_SECOND); //	20 degrees per second
@@ -48,10 +44,10 @@ export class GameScene extends Scene{
 		//	apply rotation
 		if(this.gravatar.angle > 30 ){
 			this.direction = -1;
-			hudSprite.tint = 0xffffff;
+			(this.HudOverlay as GameHud).setTint(0xffffff);
 		}else if(this.gravatar.angle < -30){
 			this.direction = 1;
-			hudSprite.tint = 0xff3366;
+			(this.HudOverlay as GameHud).setTint(0xff3366);
 		}
 		this.gravatar.angle += rot * this.direction; 
 	}
