@@ -36,6 +36,7 @@ export class GameService {
         height: SCENE_HEIGHT,
         view: nativeElement,
         transparent: false,
+        antialias: true,
       };  
       GameService._scm = new SceneManager(options);
     }
